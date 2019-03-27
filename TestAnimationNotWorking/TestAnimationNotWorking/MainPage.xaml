@@ -4,11 +4,28 @@
              xmlns:local="clr-namespace:TestAnimationNotWorking"
              x:Class="TestAnimationNotWorking.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Orientation="Vertical" Margin="0" Padding="0,0" VerticalOptions="FillAndExpand"  Spacing="0" >
+        <StackLayout x:Name="SearchForm" VerticalOptions="Fill" Padding="20,10,20,0" BackgroundColor="#F9F9F9" Margin="0" >
+            <Label Text="Search" HorizontalTextAlignment="Center" TextColor="#0057A5" FontAttributes="Bold" FontSize="24.0"/>
+            <Label Text="Box1" />
+            <Entry x:Name="box1Entry" />
+            <Label Text="Box2" />
+            <Entry x:Name="box2Entry" />
+            <Label Text="Box3" />
+            <Entry x:Name="box3Entry" />
+            <Button Text="Search" TextColor="White" BackgroundColor="#16A950" Command="{Binding SearchForPatientEncounters}" />
+        </StackLayout>
+        <StackLayout  Padding="0,0" Margin="0,0" VerticalOptions="Start" BackgroundColor="#F9F9F9">
+            <Button x:Name="accordianImage" Image="AngleUp32.png" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" Margin="0" Padding="0" >
+                <Button.Triggers>
+                    <EventTrigger Event="Clicked" >
+                        <local:ToggleSearchTrigger   />
+                    </EventTrigger>
+
+
+                </Button.Triggers>
+            </Button>
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>

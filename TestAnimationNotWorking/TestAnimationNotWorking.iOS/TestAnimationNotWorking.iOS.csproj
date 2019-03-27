@@ -157,4 +157,14 @@
       <Name>TestAnimationNotWorking</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\TestAnimationNotWorking\Assets\AngleDown32.png">
+      <Link>Resources\AngleDown32.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\TestAnimationNotWorking\Assets\AngleUp32.png">
+      <Link>Resources\AngleUp32.png</Link>
+    </BundleResource>
+  </ItemGroup>
 </Project>
